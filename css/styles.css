@@ -175,7 +175,6 @@ color: var(--link-text-color);
 
 /* STYLES HEADER */
 
-
 /* STYLES MAIN Studio */
 
 /* СТИЛИ БЛОКА ГЕРОЯ */
@@ -242,6 +241,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 }
 /* СТИЛИ БЛОКА ГЕРОЯ */
+
 
 /* СТИЛИ БЛОK ПРЕИМУЩЕСТВА */
 .benefits{
@@ -365,19 +365,19 @@ padding-bottom: 27px;
 }
 /* СТИЛИ БЛОК ЧЕМ МЫ ЗАНИМАЕМСЯ */
 
-/* СТИЛИ БЛОК НАША КОМАНДА */
 
+/* СТИЛИ БЛОК НАША КОМАНДА */
 .team{
 background-color: #F5F4FA;
 }
 
-.team-item{
+.team-title{
 font-weight: 700;
 font-size: 36px;
 line-height: 1.16;
 text-align: center;
 letter-spacing: 0.03em;
-color: #212121;
+color: var(--header-text-color);
 
 margin-top: 0;
 margin-bottom: 50px;
@@ -393,19 +393,18 @@ margin-bottom: 50px;
 
 }
 
-.team-des{
+.team-list__item{
+    background: var(--background-text-color); 
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+    
+.team-list__container{
     padding-top: 30px;
     padding-bottom: 30px;
-
 }
 
-.team-link{
-background: #FFFFFF; 
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px;
-}
-
-.team-description{
+.team-list__title{
 font-weight: 500;
 font-size: 16px;
 line-height: 1.18;
@@ -415,10 +414,9 @@ color:var(--header-text-color);
 
 margin-top: 0;
 margin-bottom: 10px;
-
 }
 
-.team-job{
+.team-list__text{
 font-weight: 400;
 font-size: 16px;
 line-height: 1.18;
@@ -430,6 +428,7 @@ margin-top: 0;
 margin-bottom: 0;
 }
 
+
 .social-list{
     list-style: none;
     display: flex;
@@ -437,10 +436,9 @@ margin-bottom: 0;
     margin-top: 16px;
     padding-left: 32px;
     padding-right: 32px;
-
 }
 
-.link-area{
+.social-list__link{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -449,12 +447,26 @@ margin-bottom: 0;
     border-radius: 50px;
     transition-property: var(--link-text-color), transform;
 transition-duration: 250ms;
-transition-timing-function: var(--timing-function);
-    
+transition-timing-function: var(--timing-function);   
 }
 
+.social-list__link:hover{
+    background-color: var(--link-text-color);
+}
 
-.social-links{
+.social-list__link:hover .social-list__links{
+    fill: var(--background-text-color);
+}
+
+.social-list__link:focus{
+    background-color: var(--link-text-color);
+}
+
+.social-list__link:focus .social-list__links{
+    fill: var(--background-text-color);
+}
+
+.social-list__links{
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
@@ -462,37 +474,23 @@ transition-timing-function: var(--timing-function);
 transition-duration: 250ms;
 transition-timing-function: var(--timing-function);
 }
+/* СТИЛИ БЛОК НАША КОМАНДА */
 
-.link-area:hover{
-    background-color: var(--link-text-color);
-}
 
-.link-area:hover .social-links{
-    fill: #ffffff;
-}
-
-.link-area:focus{
-    background-color: var(--link-text-color);
-}
-
-.link-area:focus .social-links{
-    fill: #ffffff;
-}
-
+/* СТИЛИ БЛОК КЛИЕНТЫ */
 .clients-title{
-    font-family: 'Roboto';
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
 font-size: 36px;
 line-height: 1.16;
 text-align: center;
 letter-spacing: 0.03em;
-color: #212121;
+color: var(--header-text-color);
 
 margin-top: 0;
 margin-bottom: 50px;
 }
-
 
 .clients-list{
     display: flex;
@@ -502,8 +500,7 @@ margin-bottom: 50px;
     gap: 30px;
 }
 
-
-.clients-permanent{
+.clients-list__link{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -519,19 +516,19 @@ margin-bottom: 50px;
     transition-timing-function: var(--timing-function);
 }
 
-.clients-permanent:hover,
-.clients-permanent:focus{
+.clients-list__link:hover,
+.clients-list__link:focus{
     border-color: var(--link-text-color);
 }
 
-.clients-permanent:hover>
-.clients-icon,
-.clients-permanent:focus>
-.clients-icon{
+.clients-list__link:hover>
+.clients-list__icon,
+.clients-list__link:focus>
+.clients-list__icon{
     fill: var(--link-text-color);
 }
 
-.clients-icon{
+.clients-list__icon{
     width: 106px;
     height: 60px;
     fill: #AFB1B8;
@@ -540,14 +537,14 @@ margin-bottom: 50px;
     transition-timing-function: var(--timing-function);
 }
 
-.clients-icon:hover,
-.clients-icon:focus{
+.clients-list__icon:hover,
+.clients-list__icon:focus{
     fill: var(--link-text-color);
 }
+/* СТИЛИ БЛОК КЛИЕНТЫ */
 
 
 /* STYLES MAIN portfolio */
-
 .positions-list{
     list-style-type: none;
     display: flex;
