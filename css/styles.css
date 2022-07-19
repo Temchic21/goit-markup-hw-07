@@ -3,6 +3,7 @@
 :root{
 --header-text-color: #212121;
 --link-text-color:#2196F3;
+--change-text-color:#188CE8;
 --background-text-color: #ffffff;
 --timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -55,36 +56,32 @@ padding-bottom: 24px;
 margin-right: 93px;
 }
 
-.studio-logo{
+.logo-studio{
     color: var(--header-text-color);
 }
 
-    
+    /* СТИЛИ НАВИГАЦИИ */
 .nav-nav{
     display: flex;
     align-items: center;
 }
 
-
 .nav-list{
     display: flex;
     padding-left: 0;
-    margin: 0;
-   
+    margin: 0;   
 }
 
-
-.nav-item{
+.nav-list__item{
 list-style-type: none;
 margin-right: 50px;
-
 }
 
-.nav-item:last-child{
+.nav-list__item:last-child{
     margin-right: 0;
 }
 
-.nav-link{
+.nav-list__link{
     position: relative;
 font-family: 'Roboto';
 font-style: normal;
@@ -102,16 +99,16 @@ transition-duration: 250ms;
 transition-timing-function: var(--timing-function);
 }
 
-.nav-link:hover,
-.nav-link:focus{
+.nav-list__link:hover,
+.nav-list__link:focus{
     color: var(--link-text-color);
 }
 
-.nav-link.current{
+.nav-list__link--current{
     color: var(--link-text-color);
 }
 
-.nav-link.current::after{
+.nav-list__link--current::after{
     content: "";
     width: 100%;
     height: 4px;
@@ -121,16 +118,23 @@ transition-timing-function: var(--timing-function);
     border-radius: 2px;
     background-color: var(--link-text-color);
 }
+/* СТИЛИ НАВИГАЦИИ */
 
+/* СТИЛИ КОНТАКТОВ В HEADER */
 
+.contact-list{
+    display: flex;
+    padding: 0;
+    margin-left: 305px;
+    margin-top: 0;
+    margin-bottom: 0;
 
-.header-mail{
-margin-right: 10px;
-fill: currentColor;
+}
+.contact-list__item{
+    list-style: none;
 }
 
-
-.mail{
+.contact-list__link{
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
@@ -138,11 +142,6 @@ font-size: 14px;
 line-height: 1.14;
 color: #757575;
 text-decoration: none;
-
-margin-left: 305px;
-margin-right: 30px;
-padding-top: 32px;
-padding-bottom: 32px;
 
 display: flex;
 flex-direction: row-reverse;
@@ -153,49 +152,32 @@ transition-duration: 250ms;
 transition-timing-function: var(--timing-function);
 }
 
+.contact-list__link--mail{
+    margin-right: 30px;
+}
 
-.mail:hover,
-.mail:focus{
+.contact-list__link:hover,
+.contact-list__link:focus{
+    color: var(--link-text-color);
+}
+
+.header__icon{
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.header__icon:hover,
+.header__icon:focus{
 color: var(--link-text-color);
 }
+/* СТИЛИ КОНТАКТОВ В HEADER */
 
+/* STYLES HEADER */
 
-
-.tel{
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-color: #757575;
-text-decoration: none;
-
-padding-top: 32px;
-padding-bottom: 32px;
-
-display: flex;
-flex-direction: row-reverse;
-align-items: center;
-
-transition-property: var(--link-text-color), transform;
-transition-duration: 250ms;
-transition-timing-function: var(--timing-function);
-}
-
-.header-tel{
-margin-right: 10px;
-fill: currentColor;
-}
-
-
-
-.tel:hover,
-.tel:focus{
-color: var(--link-text-color);
-}
 
 /* STYLES MAIN Studio */
 
+/* СТИЛИ БЛОКА ГЕРОЯ */
 .hero-fon{
     max-width: 1600px;
     height: 600px;
@@ -210,16 +192,14 @@ color: var(--link-text-color);
     background-repeat: no-repeat;
 }
 
-
-
-.effective{
+.hero{
     background-color: var(--header-text-color);
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
 }
 
-.effective-solutions{
+.hero__title{
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 900;
@@ -242,7 +222,7 @@ line-height: 1.87;
 cursor: pointer;
 letter-spacing: 0.06em;
 color: var(--background-text-color);
-background: #2196F3;
+background: var(--link-text-color);
 border-radius: 4px;
 min-width: 200px;
 height: 50px;
@@ -254,14 +234,15 @@ transition-property: var(--link-text-color), transform;
     transition-timing-function: var(--timing-function);
 }
 
-
 .btn-hero:hover,
 .btn-hero:focus{
-    background: #188CE8;
+    background: var(--change-text-color);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 }
+/* СТИЛИ БЛОКА ГЕРОЯ */
 
+/* СТИЛИ БЛОK НАШИ ПРЕИМУЩЕСТВА */
 .benefits{
 background-color: #ffffff;
 padding-top: 94px;
@@ -277,7 +258,6 @@ padding-bottom: 94px;
     margin-bottom: 0;
 }
 
-
 .thumb{
     display: flex;
     justify-content: center;
@@ -290,7 +270,6 @@ padding-bottom: 94px;
     border-radius: 4px;
     margin-bottom: 30px;
 }
-
 
 .benefits-item{
 font-family: 'Roboto';
@@ -317,7 +296,7 @@ width: 270px;
 height: 75px;
 }
 
-
+/* СЕКЦИЯ ЧЕМ МЫ ЗАНИМАЕМСЯ */
 .study{
     padding-top: 0;
 }
@@ -1247,5 +1226,5 @@ transition-property: var(--link-text-color), transform;
 
 .button-primary:focus,
 .button-primary:hover{
-    background-color: #188CE8;
+    background-color: var(--change-text-color);
 }
