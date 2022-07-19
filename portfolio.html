@@ -16,7 +16,7 @@
      <!-- Шапка страницы -->
      <header class="header-wrapper">
         <nav class="container nav-nav">
-            <a class="logo" href="#"><span class="web-logo">Web</span><span class="studio-logo">Studio</span> </a>
+            <a class="logo" href="#"><span class="logo-web">Web</span><span class="logo-studio">Studio</span> </a>
             <ul class="nav-list">
                 <li class="nav-list__item">
                     <a class="nav-list__link" href="index.html">Студия</a></li>
@@ -25,16 +25,22 @@
                 <li class="nav-list__item">
                     <a class="nav-list__link" href="#">Контакты</a></li>
             </ul>
-            <a class="mail" href="#">info@devstudio.com
-                <svg class="header-mail" width="16px" height="12px">
-                    <use class="mail-icon" href="./img/icons.svg#icon-envelope"></use>
-                </svg>
-            </a>
-            <a class="tel"  href="#">+38 096 111 11 11
-                <svg class="header-tel" width="10px" height="16px">
-                    <use class="tel-icon" href="./img/icons.svg#icon-smartphone"></use>
-                </svg>
-            </a>
+            <ul class="contact-list">
+                <li class="contact-list__item">
+                    <a class="contact-list__link contact-list__link--mail" href="#">info@devstudio.com
+                        <svg class="header__icon" width="16px" height="12px">
+                            <use href="./img/icons.svg#icon-envelope"></use>
+                        </svg>
+                    </a>
+                </li>
+               <li class="contact-list__item" >
+                <a class="contact-list__link contact-list__link--tel"  href="#">+38 096 111 11 11
+                    <svg class="header__icon" width="10px" height="16px">
+                        <use href="./img/icons.svg#icon-smartphone"></use>
+                    </svg>
+                </a>
+               </li>
+            </ul>
         </nav>      
     </header>
      <!-- Основной контент -->
@@ -42,29 +48,29 @@
         <section class="section positions">
             <div class="container">
                 <ul class="positions-list">
-                    <li class="positions-link">
-                        <button class="positions-item"   type="button">Все</button>
+                    <li class="positions-list__item">
+                        <button class="positions-list__btn"   type="button">Все</button>
                     </li>
-                    <li class="positions-link">
-                        <button class="positions-item" type="button">Веб-сайты</button>
+                    <li class="positions-list__item">
+                        <button class="positions-list__btn" type="button">Веб-сайты</button>
                     </li>
-                    <li class="positions-link">
-                        <button class="positions-item" type="button">Приложения</button>
+                    <li class="positions-list__item">
+                        <button class="positions-list__btn" type="button">Приложения</button>
                     </li>
-                    <li class="positions-link">
-                        <button class="positions-item"type="button">Дизайн</button>
+                    <li class="positions-list__item">
+                        <button class="positions-list__btn"type="button">Дизайн</button>
                     </li>
-                    <li class="positions-link">
-                        <button class="positions-item" type="button">Маркетинг</button>
+                    <li class="positions-list__item">
+                        <button class="positions-list__btn" type="button">Маркетинг</button>
                     </li>
                 </ul>
-                <ul class="pictures">
-                    <li class="pictures-list">
-                        <a class="pictures-link" href="#">
-                            <div class="overlay-thumb">
-                                <img class="pictures-photo"src="img/notebook.jpg" alt="notebook" width="370">
-                                <div class="overlay">
-                                   <p class="overlay-parag">
+                <ul class="pictures-list">
+                    <li class="pictures-list__item">
+                        <a class="pictures-list__link" href="#">
+                            <div class="flat-item">
+                                <img class="flat-item__photo"src="img/notebook.jpg" alt="notebook" width="370">
+                                <div class="flat-item__overlay">
+                                   <p class="flat-item__text">
                                        Ресурс предлагает комплексные 
                                        предложения с разным уровнем 
                                        функционала и сервисов. Все это 
@@ -74,17 +80,17 @@
                                 </div> 
                             </div>  
                             <div class="pictures-nut">
-                                <h2 class="pictures-item">Технокряк</h2>
-                                <p class="pictures-niches">Веб-сайт</p>
+                                <h2 class="pictures-nut__title">Технокряк</h2>
+                                <p class="pictures-nut__text">Веб-сайт</p>
                             </div>
                         </a>
                     </li>
-                    <li class="pictures-list">
-                        <a class="pictures-link" href="#">
-                            <div class="overlay-thumb">
-                                <img class="pictures-photo" src="img/basketball.jpg" alt="basketball" width="370">
-                                <div class="overlay">
-                                    <p class="overlay-parag">
+                    <li class="pictures-list__item">
+                        <a class="pictures-list__link" href="#">
+                            <div class="flat-item">
+                                <img class="flat-item__photo" src="img/basketball.jpg" alt="basketball" width="370">
+                                <div class="flat-item__overlay">
+                                    <p class="flat-item__text">
                                         Ресурс предлагает комплексные 
                                         предложения с разным уровнем 
                                         функционала и сервисов. Все это 
@@ -94,17 +100,17 @@
                                  </div> 
                             </div>
                             <div class="pictures-nut">
-                                <h2 class="pictures-item">Постер New Orlean vs Golden Star</h2>
-                                <p class="pictures-niches">Дизайн</p>
+                                <h2 class="pictures-nut__title">Постер New Orlean vs Golden Star</h2>
+                                <p class="pictures-nut__text">Дизайн</p>
                             </div>
                         </a>
                     </li >
-                    <li class="pictures-list">
-                        <a class="pictures-link" href="#">
-                            <div class="overlay-thumb">
-                                <img  class="pictures-photo" src="img/seafood.jpg" alt="seafood" width="370">
-                                <div class="overlay">
-                                    <p class="overlay-parag">
+                    <li class="pictures-list__item">
+                        <a class="pictures-list__link" href="#">
+                            <div class="flat-item">
+                                <img  class="flat-item__photo" src="img/seafood.jpg" alt="seafood" width="370">
+                                <div class="flat-item__overlay">
+                                    <p class="flat-item__text">
                                         Ресурс предлагает комплексные 
                                         предложения с разным уровнем 
                                         функционала и сервисов. Все это 
@@ -114,17 +120,17 @@
                                  </div> 
                             </div>
                             <div class="pictures-nut">
-                                <h2 class="pictures-item">Ресторан Seafood</h2>
-                                <p class="pictures-niches">Приложение</p>
+                                <h2 class="pictures-nut__title">Ресторан Seafood</h2>
+                                <p class="pictures-nut__text">Приложение</p>
                             </div>   
                         </a>
                     </li>
-                    <li class="pictures-list">
-                        <a  class="pictures-link" href="#">
-                            <div class="overlay-thumb">
-                                <img class="pictures-photo" src="img/headphones.jpg" alt="headphones" width="370">
-                                <div class="overlay">
-                                    <p class="overlay-parag">
+                    <li class="pictures-list__item">
+                        <a  class="pictures-list__link" href="#">
+                            <div class="flat-item">
+                                <img class="flat-item__photo" src="img/headphones.jpg" alt="headphones" width="370">
+                                <div class="flat-item__overlay">
+                                    <p class="flat-item__text">
                                         Ресурс предлагает комплексные 
                                         предложения с разным уровнем 
                                         функционала и сервисов. Все это 
@@ -134,17 +140,17 @@
                                  </div> 
                             </div>
                             <div class="pictures-nut">
-                                <h2 class="pictures-item">Проект Prime</h2>
-                                <p class="pictures-niches">Маркетинг</p>
+                                <h2 class="pictures-nut__title">Проект Prime</h2>
+                                <p class="pictures-nut__text">Маркетинг</p>
                             </div>
                         </a>
                     </li>
-                    <li class="pictures-list">
-                        <a class="pictures-link" href="#">
-                            <div class="overlay-thumb">
-                                <img class="pictures-photo" src="img/box.jpg" alt="box" width="370">
-                                <div class="overlay">
-                                    <p class="overlay-parag">
+                    <li class="pictures-list__item">
+                        <a class="pictures-list__link" href="#">
+                            <div class="flat-item">
+                                <img class="flat-item__photo" src="img/box.jpg" alt="box" width="370">
+                                <div class="flat-item__overlay">
+                                    <p class="flat-item__text">
                                         Ресурс предлагает комплексные 
                                         предложения с разным уровнем 
                                         функционала и сервисов. Все это 
@@ -154,17 +160,17 @@
                                  </div> 
                             </div>
                             <div class="pictures-nut">
-                                <h2 class="pictures-item">Проект Boxes</h2>
-                                <p class="pictures-niches">Приложение</p>
+                                <h2 class="pictures-nut__title">Проект Boxes</h2>
+                                <p class="pictures-nut__text">Приложение</p>
                             </div> 
                         </a>
                     </li>
-                    <li class="pictures-list">
-                        <a  class="pictures-link" href="#">
-                            <div class="overlay-thumb">
-                                <img class="pictures-photo" src="img/computer.jpg" alt="computer" width="370">
-                                <div class="overlay">
-                                    <p class="overlay-parag">
+                    <li class="pictures-list__item">
+                        <a  class="pictures-list__link" href="#">
+                            <div class="flat-item">
+                                <img class="flat-item__photo" src="img/computer.jpg" alt="computer" width="370">
+                                <div class="flat-item__overlay">
+                                    <p class="flat-item__text">
                                         Ресурс предлагает комплексные 
                                         предложения с разным уровнем 
                                         функционала и сервисов. Все это 
@@ -174,17 +180,17 @@
                                  </div> 
                             </div>
                             <div class="pictures-nut">
-                                <h2 class="pictures-item">Inspiration has no Borders</h2>
-                                <p class="pictures-niches">Веб-сайт</p>
+                                <h2 class="pictures-nut__title">Inspiration has no Borders</h2>
+                                <p class="pictures-nut__text">Веб-сайт</p>
                             </div>
                         </a>
                     </li>
-                    <li class="pictures-list">
-                        <a class="pictures-link" href="#">
-                            <div class="overlay-thumb">
-                                <img class="pictures-photo" src="img/book.jpg" alt="book" width="370">
-                                <div class="overlay">
-                                    <p class="overlay-parag">
+                    <li class="pictures-list__item">
+                        <a class="pictures-list__link" href="#">
+                            <div class="flat-item">
+                                <img class="flat-item__photo" src="img/book.jpg" alt="book" width="370">
+                                <div class="flat-item__overlay">
+                                    <p class="flat-item__text">
                                         Ресурс предлагает комплексные 
                                         предложения с разным уровнем 
                                         функционала и сервисов. Все это 
@@ -194,17 +200,17 @@
                                  </div> 
                             </div>
                             <div class="pictures-nut">
-                                <h2 class="pictures-item">Издание Limited Edition</h2>
-                                <p class="pictures-niches">Дизайн</p>
+                                <h2 class="pictures-nut__title">Издание Limited Edition</h2>
+                                <p class="pictures-nut__text">Дизайн</p>
                             </div>
                         </a>
                     </li>
-                    <li class="pictures-list">
-                        <a class="pictures-link" href="#">
-                            <div class="overlay-thumb">
-                                <img class="pictures-photo" src="img/label.jpg" alt="label" width="370">
-                                <div class="overlay">
-                                    <p class="overlay-parag">
+                    <li class="pictures-list__item">
+                        <a class="pictures-list__link" href="#">
+                            <div class="flat-item">
+                                <img class="flat-item__photo" src="img/label.jpg" alt="label" width="370">
+                                <div class="flat-item__overlay">
+                                    <p class="flat-item__text">
                                         Ресурс предлагает комплексные 
                                         предложения с разным уровнем 
                                         функционала и сервисов. Все это 
@@ -214,17 +220,17 @@
                                  </div> 
                             </div>
                             <div class="pictures-nut">
-                                <h2 class="pictures-item">Проект LAB</h2>
-                                <p class="pictures-niches">Маркетинг</p>
+                                <h2 class="pictures-nut__title">Проект LAB</h2>
+                                <p class="pictures-nut__text">Маркетинг</p>
                             </div> 
                         </a>
                     </li>
-                    <li class="pictures-list">
-                        <a class="pictures-link" href="#">
-                            <div class="overlay-thumb">
-                                <img class="pictures-photo" src="img/recruit.jpg" alt="recruit" width="370">
-                                <div class="overlay">
-                                    <p class="overlay-parag">
+                    <li class="pictures-list__item">
+                        <a class="pictures-list__link" href="#">
+                            <div class="flat-item">
+                                <img class="flat-item__photo" src="img/recruit.jpg" alt="recruit" width="370">
+                                <div class="flat-item__overlay">
+                                    <p class="flat-item__text">
                                         Ресурс предлагает комплексные 
                                         предложения с разным уровнем 
                                         функционала и сервисов. Все это 
@@ -234,8 +240,8 @@
                                  </div> 
                             </div>
                             <div class="pictures-nut">
-                                <h2 class="pictures-item">Growing Business</h2>
-                                <p class="pictures-niches">Приложение</p>
+                                <h2 class="pictures-nut__title">Growing Business</h2>
+                                <p class="pictures-nut__text">Приложение</p>
                             </div>
                         </a>
                     </li>
