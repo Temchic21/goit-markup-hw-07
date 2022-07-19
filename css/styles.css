@@ -2,6 +2,7 @@
 
 :root{
 --header-text-color: #212121;
+--primary-text-color: #757575;
 --link-text-color:#2196F3;
 --change-text-color:#188CE8;
 --background-text-color: #ffffff;
@@ -140,7 +141,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 1.14;
-color: #757575;
+color: var(--primary-text-color);
 text-decoration: none;
 
 display: flex;
@@ -242,7 +243,7 @@ border-radius: 4px;
 }
 /* СТИЛИ БЛОКА ГЕРОЯ */
 
-/* СТИЛИ БЛОK НАШИ ПРЕИМУЩЕСТВА */
+/* СТИЛИ БЛОK ПРЕИМУЩЕСТВА */
 .benefits{
 background-color: #ffffff;
 padding-top: 94px;
@@ -258,7 +259,12 @@ padding-bottom: 94px;
     margin-bottom: 0;
 }
 
-.thumb{
+.benefits-list__item{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.benefits-list__container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -271,36 +277,52 @@ padding-bottom: 94px;
     margin-bottom: 30px;
 }
 
-.benefits-item{
+.benefits-list__title{   
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
 font-size: 14px;
-line-height: 1.14;
+line-height: 16px;
 letter-spacing: 0.03em;
 text-transform: uppercase;
+
 color: var(--header-text-color);
 
-margin-top: 0;
+margin: 0;
 margin-bottom: 10px;
 }
 
-.benefits-link{
+.benefits-list__text{
+font-family: 'Roboto';
+font-style: normal;
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
-color: #757575;
+color: var(--primary-text-color);
 margin-top: 0;
 margin-bottom: 0;
 width: 270px;
 height: 75px;
 }
+/* СТИЛИ БЛОK ПРЕИМУЩЕСТВА */
 
-/* СЕКЦИЯ ЧЕМ МЫ ЗАНИМАЕМСЯ */
+
+/* СТИЛИ БЛОК ЧЕМ МЫ ЗАНИМАЕМСЯ */
 .study{
     padding-top: 0;
 }
 
+.study-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--header-text-color);
+    
+    margin-top: 0;
+    margin-bottom: 50px;
+}
 
 .study-list{
     list-style-type: none;
@@ -311,12 +333,15 @@ height: 75px;
     margin-top: 0;
 }
 
-.study-link{
+.study-list__item{
     position: relative;
 }
 
+.study-list__photo{
+    display: block;
+}
 
-.study-description{
+.study-list__text{
 position: absolute;
 left: 0;
 bottom: 0;
@@ -338,23 +363,9 @@ margin: 0;
 padding-top: 27px;
 padding-bottom: 27px;
 }
+/* СТИЛИ БЛОК ЧЕМ МЫ ЗАНИМАЕМСЯ */
 
-
-.study-photo{
-    display: block;
-}
-
-.study-item{
-font-weight: 700;
-font-size: 36px;
-line-height: 1.16;
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--header-text-color);
-
-margin-top: 0;
-margin-bottom: 50px;
-}
+/* СТИЛИ БЛОК НАША КОМАНДА */
 
 .team{
 background-color: #F5F4FA;
@@ -413,7 +424,7 @@ font-size: 16px;
 line-height: 1.18;
 text-align: center;
 letter-spacing: 0.03em;
-color: #757575;
+color: var(--primary-text-color);
 
 margin-top: 0;
 margin-bottom: 0;
@@ -704,7 +715,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.87;
 letter-spacing: 0.03em;
-color: #757575;
+color: var(--primary-text-color);
 
 margin: 0;
 }
@@ -1070,7 +1081,7 @@ margin-bottom: 12px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
-    color: #757575;
+    color: var(--primary-text-color);
     padding: 0;
     margin-bottom: 4px;
 }
@@ -1128,7 +1139,7 @@ transition-timing-function: var(--timing-function);
     min-height: 120px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    color: #757575;
+    color: var(--primary-text-color);
     padding: 12px 16px;
     margin: 0;
     resize: none;
@@ -1158,7 +1169,7 @@ font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
 
-color: #757575;
+color: var(--primary-text-color);
 
  margin-bottom: 30px;
 }
