@@ -324,50 +324,53 @@
     </main>
     <!-- Подвал -->
     <footer class="footer">
-    <div class="container fooress">
+    <div class="container footer-flat">
         <div class="footer-address">
-            <a class="footer-logo"href="#"> <span class="footer-web">Web</span> <span class="footer-studio">Studio</span></a>
+            <a class="footer-logo"href="#"> 
+                <span class="footer-logo__web">Web</span> 
+                <span class="footer-logo__studio">Studio</span>
+            </a>
             <address class="address">   
                 <ul  class="footer-list">
-                    <li class="footer-item">
-                        <a class="be" href="#"> г. Киев, пр-т Леси Украинки, 26</a>
+                    <li class="footer-list__item">
+                        <a class="footer-list__link footer-list__link--current" href="#"> г. Киев, пр-т Леси Украинки, 26</a>
                     </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#"> info@example.com</a>
+                    <li class="footer-list__item">
+                        <a class="footer-list__link" href="#"> info@example.com</a>
                     </li>
-                    <li class="footer-item">
-                        <a class="footer-link" href="#"> +38 099 111 11 11</a>
+                    <li class="footer-list__item">
+                        <a class="footer-list__link" href="#"> +38 099 111 11 11</a>
                     </li>
                 </ul>
             </address>
         </div>
             <div class="footer-social">
-                <p class="join">присоединяйтесь</p>
+                <p class="social">присоединяйтесь</p>
                 <ul class="join-list">
-                    <li class="join-link">
-                        <a class="join-item" href="#">
-                            <svg class="join-icon" width="20px"  height="20px">
+                    <li class="join-list__item">
+                        <a class="join-list__link" href="#">
+                            <svg class="join-list__icon" width="20px"  height="20px">
                                 <use href="./img/icons.svg#icon-instagram"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="join-link">
-                        <a class="join-item" href="#">
-                            <svg class="join-icon" width="20px"  height="20px">
+                    <li class="join-list__item">
+                        <a class="join-list__link" href="#">
+                            <svg class="join-list__icon" width="20px"  height="20px">
                                 <use href="./img/icons.svg#icon-twitter"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="join-link">
-                        <a class="join-item" href="#">
-                            <svg class="join-icon" width="20px"  height="20px">
+                    <li class="join-list__item">
+                        <a class="join-list__link" href="#">
+                            <svg class="join-list__icon" width="20px"  height="20px">
                                 <use href="./img/icons.svg#icon-facebook"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="join-link">
-                        <a class="join-item" href="#">
-                            <svg class="join-icon" width="20px"  height="20px">
+                    <li class="join-list__item">
+                        <a class="join-list__link" href="#">
+                            <svg class="join-list__icon" width="20px"  height="20px">
                                 <use href="./img/icons.svg#icon-linkedin"></use>
                             </svg>
                         </a>
@@ -375,13 +378,13 @@
                 </ul>
             </div>
             <div class="footer-right-block">
-                <b class="footer-cta">Подпишись на рассылку</b>
-                <form class="subscription" name="subscription" autocomplete="on">
-                    <label for="subscription-email"></label>
-                    <input class="subscription-input" type="email" name="subscription-email" id="subscription-email" placeholder="Email" required />
-                    <button class="form-submit-btn" type="submit">
+                <b class="footer-text">Подпишись на рассылку</b>
+                <form class="subscription-form" name="subscription" autocomplete="on">
+                    <label for="subscription-form__label"></label>
+                    <input class="subscription-form__input" type="email" name="subscription-email" id="subscription-email" placeholder="Email" required />
+                    <button class="subscription-form__btn" type="submit">
                         Подписаться
-                        <svg class="fotm-sumbit-icon" width="24px"  height="24px">
+                        <svg class="subscription-form__icon" width="24px"  height="24px">
                             <use href="./img/icons.svg#icon-send"></use>
                         </svg>
                     </button>
@@ -393,8 +396,8 @@
     <!-- Модальное окно -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="modal-close-btn" data-modal-close>
-                <svg class="close-btn-icon" width="11px" height="11px">
+            <button type="button" class="modal-close__btn" data-modal-close>
+                <svg class="modal-close__icon" width="11px" height="11px">
                     <use href="./img/icons.svg#icon-close"></use>
                 </svg>
             </button>
@@ -403,24 +406,24 @@
                 <div role="group" class="form-group-field">
                     <label class="form-label" for="user-name">Имя</label>
                     <div class="form-field">
-                        <svg class="input-icon" width="12px"  height="12px">
+                        <svg class="form-field__icon" width="12px"  height="12px">
                             <use href="./img/icons.svg#icon-human"></use>
                         </svg>
-                        <input class="form-input" type="text" name="user-name" id="user-name" minlength="3" placeholder=" " required autofocus>
+                        <input class="form-field__input" type="text" name="user-name" id="user-name" minlength="3" placeholder=" " required autofocus>
                     </div>
                     <label class="form-label" for="user-phone">Tелефон</label>
                     <div class="form-field">
-                        <svg class="input-icon" width="14px"  height="14px">
+                        <svg class="form-field__icon" width="14px"  height="14px">
                             <use href="./img/icons.svg#icon-tel"></use>
                         </svg>
-                        <input class="form-input" type="tel" name="user-phone" id="user-phone" placeholder=" " required>
+                        <input class="form-field__input" type="tel" name="user-phone" id="user-phone" placeholder=" " required>
                     </div>
                     <label class="form-label" for="user-mail">Почта</label>
                     <div class="form-field">
-                        <svg class="input-icon" width="16px"  height="12px">
+                        <svg class="form-field__icon" width="16px"  height="12px">
                             <use href="./img/icons.svg#icon-mail"></use>
                         </svg>
-                        <input class="form-input" type="mail" name="user-mail" id="user-mail" placeholder=" " required>
+                        <input class="form-field__input" type="mail" name="user-mail" id="user-mail" placeholder=" " required>
                     </div>
                     <label class="form-label" for="user-notes">Комментарий</label>
                     <textarea class="form-textarea" name="user-notes" id="user-notes" role="3" placeholder="Введите текст"></textarea>
