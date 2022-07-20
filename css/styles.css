@@ -1158,17 +1158,12 @@ color: var(--primary-text-color);
  margin-bottom: 30px;
 }
 
-.checkbox{
+.form-check__checkbox{
     appearance: none;
     position: absolute;
 }
 
-.last-label {
-    margin-bottom: 0;
-    margin-left: 8px;
-  }
-  
-  .checkbox-icon {
+.form-check__icon {
     display: inline-block;
     width: 16px;
     height: 15px;
@@ -1182,25 +1177,31 @@ color: var(--primary-text-color);
     transition-timing-function: var(--timing-function);
   }
 
-.checkbox:checked + .checkbox-icon{
+  .form-check__checkbox:checked + .form-check__icon{
     background-color: var(--link-text-color);
     background-image: url(../img/icon\ check\ .svg);
     background-size: contain;
     background-origin: border-box;
     border-color: transparent;
-
 }
 
-.form-link{
+
+.last-label {
+    margin-bottom: 0;
+    margin-left: 8px;
+  }
+  
+ 
+.form-check__link{
     color: var(--link-text-color);
 }
 
-.from-button{
+.checkbox-button{
     margin-right: auto;
     margin-left: auto;
 }
 
-.button-primary{
+.checkbox-button__primary{
     padding: 10px 32px;
     min-width: 200px;
     background-color: var(--link-text-color);
@@ -1219,7 +1220,7 @@ transition-property: var(--link-text-color), transform;
     transition-timing-function: var(--timing-function);
 }
 
-.button-primary:focus,
-.button-primary:hover{
+.checkbox-button__primary:focus,
+.checkbox-button__primary:hover{
     background-color: var(--change-text-color);
 }
