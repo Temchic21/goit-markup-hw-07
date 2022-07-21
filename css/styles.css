@@ -57,7 +57,7 @@ border-bottom: 1px solid var(--border-solid-colot);
 }
 
 
-.logo{   
+.logo-header{   
 font-family: 'Raleway';
 font-style: normal;
 font-weight: 700;
@@ -72,7 +72,7 @@ padding-bottom: 24px;
 margin-right: 93px;
 }
 
-.logo-studio{
+.logo-header__studio{
     color: var(--header-text-color);
 }
 
@@ -177,13 +177,13 @@ transition-timing-function: var(--timing-function);
     color: var(--link-text-color);
 }
 
-.header__icon{
+.contact-list__icon{
     margin-right: 10px;
     fill: currentColor;
 }
 
-.header__icon:hover,
-.header__icon:focus{
+.contact-list__icon:hover,
+.contact-list__icon:focus{
 color: var(--link-text-color);
 }
 /* СТИЛИ КОНТАКТОВ В HEADER */
@@ -214,7 +214,7 @@ color: var(--link-text-color);
     padding-bottom: 200px;
 }
 
-.hero__title{
+.hero-title{
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 900;
