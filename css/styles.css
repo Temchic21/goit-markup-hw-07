@@ -1,17 +1,31 @@
-
-
+/* utilities */
+/* VARIABLES */
 :root{
 --header-text-color: #212121;
 --primary-text-color: #757575;
+--social-group-color:#AFB1B8;
+--background-footer-color: #2F303A;
+--join-link-color:#44454E;
+--footer-list-color:rgba(255, 255, 255, 0.6);
 --link-text-color:#2196F3;
 --change-text-color:#188CE8;
 --background-text-color: #ffffff;
+--border-solid-colot:#ECECEC;
+--benefis-background-color:#F5F4FA;
+--border-pictures-nut-color:#EEEEEE;
 --timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+--btn-hero-border:rgba(0, 0, 0, 0.15);
+--hero-fon-color: rgba(47, 48, 58, 0.4);
+--study-list-text-color: rgba(47, 48, 58, 0.8);
+--flat-item-overlay-color:rgba(33, 150, 243, 0.9);
+--subscription-form-input-color:rgba(255, 255, 255, 0.3);
+--backdrop-background-color:rgba(0, 0, 0, 0.2);
+--close-btn-modal-color:rgba(0, 0, 0, 0.1);
+--border-input-color:rgba(33, 33, 33, 0.2);
 }
+/* VARIABLES */
 
-
-
-
+/* base */
 body{
 background-color: var(--background-text-color);
 font-family: 'Roboto', 'Raleway';
@@ -31,14 +45,15 @@ font-style: normal;
     padding-bottom: 94px;
     margin: 0 auto;
 }
-
+/* base */
+/* utilities */
 
 
 /* STYLES HEADER */
 
 .header-wrapper{
-background-color: #ffffff;
-border-bottom: 1px solid #ECECEC;
+background-color: var(--background-text-color);
+border-bottom: 1px solid var(--border-solid-colot);
 }
 
 
@@ -184,9 +199,9 @@ color: var(--link-text-color);
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)  
-    ), url(../img/hero-fon.jpg);
+    var(--hero-fon-color),
+    var(--hero-fon-color)),
+    url(../img/hero-fon.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -207,7 +222,7 @@ font-size: 44px;
 line-height: 1.36;
 letter-spacing: 0.06em;
 text-transform: uppercase;
-color: #ffffff;
+color: var(--background-text-color);
 
 margin-top: 0;
 margin-bottom: 30px;
@@ -237,7 +252,7 @@ transition-property: var(--link-text-color), transform;
 .btn-hero:hover,
 .btn-hero:focus{
     background: var(--change-text-color);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+box-shadow: 0px 4px 4px var(--btn-hero-border);
 border-radius: 4px;
 }
 /* СТИЛИ БЛОКА ГЕРОЯ */
@@ -245,7 +260,7 @@ border-radius: 4px;
 
 /* СТИЛИ БЛОK ПРЕИМУЩЕСТВА */
 .benefits{
-background-color: #ffffff;
+background-color: var(--background-text-color);
 padding-top: 94px;
 padding-bottom: 94px;
 }
@@ -269,7 +284,7 @@ padding-bottom: 94px;
     justify-content: center;
     align-items: center;
 
-    background-color: #F5F4FA;
+    background-color: var(--benefis-background-color);
     width: 270px;
     height: 120px;
 
@@ -357,7 +372,7 @@ letter-spacing: 0.03em;
 text-transform: uppercase;
 
 color: var(--background-text-color);
-background-color: rgba(47, 48, 58, 0.8);
+background-color: var(--study-list-text-color);
 
 margin: 0;
 padding-top: 27px;
@@ -368,7 +383,7 @@ padding-bottom: 27px;
 
 /* СТИЛИ БЛОК НАША КОМАНДА */
 .team{
-background-color: #F5F4FA;
+background-color: var(--benefis-background-color);
 }
 
 .team-title{
@@ -469,7 +484,7 @@ transition-timing-function: var(--timing-function);
 .social-list__links{
     width: 20px;
     height: 20px;
-    fill: #AFB1B8;
+    fill: var(--social-group-color);
     transition-property: fill, transform;
 transition-duration: 250ms;
 transition-timing-function: var(--timing-function);
@@ -508,7 +523,7 @@ margin-bottom: 50px;
     width: 170px;
     height: 92px;
 
-    border: 1px solid #AFB1B8;
+    border: 1px solid var(--social-group-color);
     border-radius: 4px; 
 
     transition-property: var(--link-text-color), transform;
@@ -531,7 +546,7 @@ margin-bottom: 50px;
 .clients-list__icon{
     width: 106px;
     height: 60px;
-    fill: #AFB1B8;
+    fill: var(--social-group-color);
     transition-property: var(--link-text-color), transform;
     transition-duration:250ms;
     transition-timing-function: var(--timing-function);
@@ -573,12 +588,12 @@ line-height: 1.62;
 text-align: center;
 letter-spacing: 0.03em;
 color: var(--header-text-color);
-background: #F5F4FA;
+background: var(--benefis-background-color);
 border-radius: 4px;
 cursor: pointer;
 
 padding: 6px 22px 6px 22px;
-border: 0 solid #F5F4FA;
+border: 0 solid var(--benefis-background-color);
 
 transition-property: var(--link-text-color), transform;
 transition-duration:250ms;
@@ -605,7 +620,7 @@ background: var(--link-text-color);
 }
 
 .pictures-list__item{
-background: #FFFFFF;
+background:var(--background-text-color);
 width: 370px;
 margin-right: 30px;
 margin-bottom: 30px;
@@ -646,7 +661,7 @@ margin-bottom: 0;
     left: 0;
     width: 370px;
     height: 294px;
-    background-color: rgba(33, 150, 243, 0.9);
+    background-color: var(--flat-item-overlay-color);
     padding: 63px 24px;
    
     transform: translateY(100%);
@@ -673,16 +688,16 @@ margin-bottom: 0;
     font-size: 18px;
     line-height:1.55;
     letter-spacing: 0.03em;
-    color: #FFFFFF;
+    color: var(--background-text-color);
     
     margin: 0;
 }
 
 
 .pictures-nut{
-    border-left:  1px solid #EEEEEE;
-    border-right: 1px solid #EEEEEE;
-    border-bottom:1px solid #EEEEEE;
+    border-left:  1px solid var(--border-pictures-nut-color);
+    border-right: 1px solid var(--border-pictures-nut-color);
+    border-bottom:1px solid var(--border-pictures-nut-color);
 
     padding: 20px 24px 20px 24px;
 }
@@ -717,7 +732,7 @@ margin: 0;
 
 /* STYLES FOOTER */
 .footer{
-background: #2F303A;
+background: var(--background-footer-color);
 
 padding-top: 60px;
 padding-bottom: 60px;
@@ -771,7 +786,7 @@ margin-bottom: 20px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--footer-list-color);
     text-decoration: none;
     
     transition-property: var(--background-text-color), transform;
@@ -788,14 +803,14 @@ margin-bottom: 20px;
 .footer-list__link--current{
 color: var(--background-text-color);
 
-transition-property:  rgba(255, 255, 255, 0.6), transform;
+transition-property:  var(--footer-list-color), transform;
     transition-duration:250ms;
     transition-timing-function: var(--timing-function);
 }
 
 .footer-list__link--current:hover,
 .footer-list__link--current:focus{
-color: rgba(255, 255, 255, 0.6);
+color: var(--footer-list-color);
 }
 /* СТИЛИ БЛОК АДРЕС */
 
@@ -819,7 +834,7 @@ color: rgba(255, 255, 255, 0.6);
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--background-text-color);
 
     margin-top: 0;
     margin-bottom: 20px;
@@ -849,7 +864,7 @@ color: rgba(255, 255, 255, 0.6);
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: #44454E;
+    background-color: var(--join-link-color);
 
 
     transition-property: var(--link-text-color), transform;
@@ -909,13 +924,13 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.25;
 color: var(--background-text-color);
-background:#2F303A;
-border: 1px solid rgba(255, 255, 255, 0.3);
+background:var(--background-footer-color);
+border: 1px solid var(--subscription-form-input-color);
 border-radius: 4px;
 }
 
 .subscription-form__input:focus{
-    outline:#2F303A; ;
+    outline:var(--background-footer-color);
 }
 
 .subscription-form__btn{
@@ -946,7 +961,7 @@ transition-timing-function: var(--timing-function);
 
 .subscription-form__btn:hover,
 .subscription-form__btn:focus{
-    background-color: #188CE8;
+    background-color: var(--change-text-color);
 }
 
 
@@ -968,7 +983,7 @@ transition-timing-function: var(--timing-function);
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--backdrop-background-color);
 
     opacity: 1;
 
@@ -992,7 +1007,7 @@ transition-timing-function: var(--timing-function);
     width: 528px;
     height: 581px;
 
-    background: #FFFFFF;
+    background: var(--background-text-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
@@ -1014,7 +1029,7 @@ transition-timing-function: var(--timing-function);
     width: 30px;
     height: 30px;
     background: inherit;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--close-btn-modal-color);
     border-radius: 50%;
     padding: 0;
     cursor: pointer;
@@ -1049,7 +1064,7 @@ line-height: 1.15;
 text-align: center;
 letter-spacing: 0.03em;
 
-color: #212121;
+color: var(--header-text-color);
 margin-bottom: 12px;
 }
 
@@ -1098,9 +1113,9 @@ transition-timing-function: var(--timing-function);
 .form-field__input{
     width: 100%;
     min-height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid var(--border-input-color);
 border-radius: 4px;
-color: #757575;
+color: var(--primary-text-color);
 padding-left: 42px;
 outline: 0;
 
@@ -1121,7 +1136,7 @@ transition-timing-function: var(--timing-function);
     display: block;
     width: 100%;
     min-height: 120px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid var(--border-input-color);
     border-radius: 4px;
     color: var(--primary-text-color);
     padding: 12px 16px;
