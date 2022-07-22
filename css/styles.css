@@ -1018,7 +1018,7 @@ transition-timing-function: var(--timing-function);
     padding: 40px;
 }
 
-.modal-close__btn{
+.modal__btn{
     position: absolute;
     top: 8px;
     right: 8px;
@@ -1035,7 +1035,7 @@ transition-timing-function: var(--timing-function);
     cursor: pointer;
 }
 
-.modal-close__icon{
+.modal__icon{
 display: block;
 fill: var(--header-text-color);
 
@@ -1044,8 +1044,8 @@ transition-duration:250ms;
 transition-timing-function: var(--timing-function);
 }
 
-.modal-close__icon:hover,
-.modal-close__icon:focus{
+.modal__icon:hover,
+.modal__icon:focus{
     fill: var(--link-text-color);
 }
 

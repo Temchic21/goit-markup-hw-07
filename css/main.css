@@ -947,4 +947,283 @@ body {
   height: 24px;
   margin-left: 10px;
   fill: var(--background-text-color);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--backdrop-background-color);
+  opacity: 1;
+  -webkit-transition: opacity 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden.modal {
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  height: 581px;
+  background: var(--background-text-color);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 250ms var(--timing-function);
+  transition: -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+  padding: 40px;
+}
+.modal__btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  background: inherit;
+  border: 1px solid var(--close-btn-modal-color);
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+.modal__icon {
+  display: block;
+  fill: var(--header-text-color);
+  -webkit-transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), transform;
+  transition-property: var(--link-text-color), transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+.modal__icon:hover, .modal__icon:focus {
+  fill: var(--link-text-color);
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  padding: 0;
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--header-text-color);
+  margin-bottom: 12px;
+}
+
+.form-group-field {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.form-field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.form-field__icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  fill: var(--header-text-color);
+  -webkit-transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), transform;
+  transition-property: var(--link-text-color), transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+.form-field:focus-within > .form-field__icon, .form-field:hover > .form-field__icon, .form-field:focus > .form-field__icon {
+  fill: var(--link-text-color);
+}
+.form-field__input {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid var(--border-input-color);
+  border-radius: 4px;
+  color: var(--primary-text-color);
+  padding-left: 42px;
+  outline: 0;
+  -webkit-transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), transform;
+  transition-property: var(--link-text-color), transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+.form-field__input:focus-within, .form-field__input:hover, .form-field__input:focus {
+  border: 1px solid var(--link-text-color);
+  fill: var(--link-text-color);
+}
+
+.form-textarea {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid var(--border-input-color);
+  border-radius: 4px;
+  color: var(--primary-text-color);
+  padding: 12px 16px;
+  margin: 0;
+  resize: none;
+  outline: 0;
+  -webkit-transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), transform;
+  transition-property: var(--link-text-color), transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+.form-textarea:focus-within, .form-textarea:hover, .form-textarea:focus {
+  border: 1px solid var(--link-text-color);
+  fill: var(--link-text-color);
+}
+
+.form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 30px;
+}
+.form-check__checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+}
+.form-check__icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-color: inherit;
+  border: 2px solid var(--header-text-color);
+  border-radius: 2px;
+  -webkit-transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), transform;
+  transition-property: var(--link-text-color), transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+.form-check__checkbox:checked + .form-check__icon {
+  background-color: var(--link-text-color);
+  background-image: url(../img/icon\ check\ .svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: transparent;
+}
+.form-check__link {
+  color: var(--link-text-color);
+}
+
+.last-label {
+  margin-bottom: 0;
+  margin-left: 8px;
+}
+
+.checkbox-button {
+  margin-right: auto;
+  margin-left: auto;
+}
+.checkbox-button__primary {
+  padding: 10px 32px;
+  min-width: 200px;
+  background-color: var(--link-text-color);
+  color: var(--background-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), -webkit-transform;
+  transition-property: var(--link-text-color), transform;
+  transition-property: var(--link-text-color), transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+.checkbox-button__primary:focus, .checkbox-button__primary:hover {
+  background-color: var(--change-text-color);
 }/*# sourceMappingURL=main.css.map */
